@@ -1,6 +1,5 @@
 const express = require("express");
 const genericServices = require("../Services/genericServices");
-
 const router = express.Router();
 
 router.get("/", async (req, res) => {
@@ -11,7 +10,6 @@ router.get("/", async (req, res) => {
         res.status(500).json({ error: error.message });
     }
 });
-
 router.get("/:id", async (req, res) => {
     try {
         const id = req.params.id;
